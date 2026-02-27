@@ -7,22 +7,18 @@ public class SistemaPrincipal {
 
     public static void main(String[] args) {
 
-        Fone meuFone = new Fone();
-        meuFone.cor = "preto";
-        meuFone.tamanho = "pequeno";
-        meuFone.estado = "novo";
-        
-        // Criando o segundo passageiro (Objeto 2)
-        Fone outroFone = new Fone();
-        outroFone.cor = "branco";
-        outroFone.tamanho = "médio";
-        outroFone.estado = "antigo";
-
-        // Exibindo os dados no Console
         System.out.println("--- Sistema FiapRide ---");
+        
+        Fone meuFone = new Fone("preto", "pequeno");
         System.out.println("Cor do fone: " + meuFone.cor + " | Tamanho: " + meuFone.tamanho + " | Estado: " + meuFone.estado);
+        
+        Fone outroFone = new Fone("branco", "médio");
         System.out.println("Cor do fone: " + outroFone.cor + " | Tamanho: " + outroFone.tamanho + " | Estado: " + outroFone.estado);
 
-        // Teste mental: Se eu mudar o nome do passageiro1, o passageiro2 muda?
+        meuFone.ligarDesligar(true);
+        meuFone.reproduzirSom(true);
+        meuFone.reproduzirSom(true);
+        meuFone.ligarDesligar(true);
+        meuFone.reproduzirSom(true);
     }
 }
