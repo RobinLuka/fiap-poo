@@ -9,16 +9,11 @@ public class SistemaPrincipal {
 
         System.out.println("--- Sistema FiapRide ---");
         
-        Fone meuFone = new Fone("preto", "pequeno");
-        System.out.println("Cor do fone: " + meuFone.getCor() + " | Tamanho: " + meuFone.getTamanho() + " | Estado: " + meuFone.getEstado());
+        Fone fone1 = new Fone("x", "x");
+        System.out.println("Cor do fone: " + fone1.getCor() + " | Tamanho: " + fone1.getTamanho() + " | Estado: " + fone1.getEstado());
         
-        Fone outroFone = new Fone("branco", "médio");
-        System.out.println("Cor do fone: " + outroFone.getCor() + " | Tamanho: " + outroFone.getTamanho() + " | Estado: " + outroFone.getEstado());
+        Fone fone2 = new Fone("branco", "médio");
+        System.out.println("Cor do fone: " + fone2.getCor() + " | Tamanho: " + fone2.getTamanho() + " | Estado: " + fone2.getEstado());
 
-        meuFone.ligarDesligar(true);
-        meuFone.apertaBotaoSom(true);
-        meuFone.apertaBotaoSom(true);
-        meuFone.ligarDesligar(true);
-        meuFone.apertaBotaoSom(true);
     }
 }
