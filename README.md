@@ -1,1 +1,1 @@
-A classe do objeto contém atributos e métodos que representam um fone de ouvido. É possível simular a ação de ligar e desligar o fone ao apertar o botão de energia (botaoEnergia = true) e ativar ou desativar som (botaoSom = true).
+A classe do objeto contém atributos e métodos que representam um fone de ouvido. É possível simular a ação de ligar e desligar o fone ao apertar o botão de energia: 'meuFone.ligarDesligar(true)' e ativar ou desativar som: 'meuFone.apertaBotaoSom(true)'.
