@@ -3,49 +3,25 @@ package br.com.fiapride.model;
 public class Fone {
 
 	private String cor;
-	private String tamanho;
+	private String marca;
 	private String estado;
-	private boolean botaoEnergia;
 	private boolean som;
-	private boolean botaoSom;
 	
 	public Fone (String cor, String tamanho) {
 		this.setCor(cor);
-		this.setTamanho(tamanho);
+		this.marca = tamanho;
 		this.estado = "desligado";
-		this.botaoEnergia = false;
 		this.som = false;
-		this.botaoSom = false;
-	}
-	
-	public String getCor() {
-		return this.cor;
-	}
-	
-	private void setCor(String cor) {
-		this.cor = cor;
-	}
-	
-	public String getTamanho() {
-		return this.tamanho;
-	}
-	
-	private void setTamanho(String tamanho) {
-		this.tamanho = tamanho;
-	}
-	
-	public String getEstado() {
-		return this.estado;
 	}
 	
 	public void ligarDesligar (boolean botaoEnergia) {
 		if (this.estado == "desligado" && botaoEnergia == true) {
 			this.estado = "ligado";
-			this.botaoEnergia = false;
+			botaoEnergia = false;
 			System.out.println("O fone estava desligado. Agora está ligado.");
 		} else if (this.estado == "ligado" && botaoEnergia == true) {
 			this.estado = "desligado";
-			this.botaoEnergia = false;
+			botaoEnergia = false;
 			System.out.println("O fone estava ligado. Agora está desligado.");
 		} else {
 			System.out.println("Erro.");
@@ -54,10 +30,10 @@ public class Fone {
 	
 	public void apertaBotaoSom (boolean botaoSom) {
 		if (this.estado == "ligado" && botaoSom == true && this.som == false) {
-			this.botaoSom = false;
+			botaoSom = false;
 			this.som = true;
 		} else if (this.estado == "ligado" && botaoSom == true && this.som == true) {
-			this.botaoSom = false;
+			botaoSom = false;
 			this.som = false;
 		} else {
 			System.out.println("Erro.");
@@ -73,4 +49,29 @@ public class Fone {
 		}
 	}
 	
+	public String getCor() {
+		return this.cor;
+	}
+	
+	public void atualizarCor(String novaCor) {
+		System.out.println("Personalizando fone de ouvido " + this.marca + "...");
+		this.setCor(novaCor);
+	}
+	
+	private void setCor(String novaCor) {
+		if (novaCor != null && !novaCor.trim().isEmpty()) {
+			this.cor = novaCor;
+			System.out.println("Cor do fone de ouvido " + this.marca + " computada.");
+		} else {
+			System.out.println("A cor informada é inválida!");
+		}
+	}
+	
+	public String getMarca() {
+		return this.marca;
+	}
+	
+	public String getEstado() {
+		return this.estado;
+	}
 }
